@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Visos Keratin</title>
+    <style>
+        body {
+            background-color: #ffb6c1;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        header {
+            background-color: black;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #ffb6c1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        .product {
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 220px;
+            background-color: rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .spacer {
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function buyProduct(productName) {
+            const userMessage = prompt("Escribe tu nombre o un mensaje antes de continuar:");
+            
+            if (userMessage === null || userMessage.trim() === "") {
+                alert("Compra cancelada. No escribiste ningún mensaje.");
+                return;
+            }
+
+            alert('🛍️ Procesando tu compra de ' + productName + '...');
+            setTimeout(function() {
+                const message = encodeURIComponent(`Hola, soy ${userMessage}. Me gustaría comprar el ${productName}.`);
+                window.location.href = 'https://wa.me/573166390429?text=' + message;
+            }, 1500);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Visos Keratin</h1>
+        <p>Productos de alta calidad para el cuidado de tu cabello</p>
+        <a href="index.html" class="back-link">← Volver al Inicio</a>
+    </header>
+
+    <h2>Productos</h2>
+
+    <section class="products-container">
+
+        <div class="product">
+            <h3>Aceite de Argan</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2024/12/aceiteargan95ml.jpg" alt="Aceite de Argan">
+            <p>Aceite especializado para el brillo del cabello.</p>
+            <p><strong>Precio:</strong> $65,000</p>
+            <button onclick="buyProduct('Aceite de Argan')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Texturizante</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGXQ4s3JxbdJtxLBNGor4JZkcuUuH49RYpsQ&s" alt="Texturizante de Marcel-France">
+            <p>Producto especializado para la suavidad y desenredo fácil del cabello.</p>
+            <p><strong>Precio:</strong> $55,000</p>
+            <button onclick="buyProduct('Texturizante')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Tónico para la caída</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2020/05/locion-anticaida-65ml-jpg.webp" alt="Tónico para la caída">
+            <p>Tónico especial para la caída del cabello.</p>
+            <p><strong>Precio:</strong> $40,000</p>
+            <button onclick="buyProduct('Tónico para la caída')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Shampoo Liso Inteligente</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2019/10/champu-lisos-inteligentes-jpg.webp" alt="Shampoo Liso Inteligente">
+            <p>Champú especializado para el liso y brillo del cabello.</p>
+            <p><strong>Precio:</strong> $45,000</p>
+            <button onclick="buyProduct('Shampoo Liso Inteligente')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Mascarilla Liso Inteligente</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX_uV5E9qBN6KusvsOShqjC8fW-RN6mQ1ruQ&s" alt="Mascarilla Liso Inteligente">
+            <p>Parte del kit liso inteligente y especializado para el cuidado del cabello.</p>
+            <p><strong>Precio:</strong> $45,000</p>
+            <button onclick="buyProduct('Mascarilla Liso Inteligente')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Shampoo Reparación Instantánea</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-wRiwAVrfZNto1MBrL5F-CNfVnH1NJaGhMw&s" alt="Shampoo Reparación Instantánea">
+            <p>Shampoo que repara y alisa el cabello.</p>
+            <p><strong>Precio:</strong> $45,000</p>
+            <button onclick="buyProduct('Shampoo Reparación Instantánea')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Kit Liso Inteligente</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2020/09/kit-lisos-inteligentes2-jpg.webp" alt="Kit Liso Inteligente">
+            <p>Kit que contiene la mascarilla, crema de peinar y champú inteligente especial para tu cabello.</p>
+            <p><strong>Precio:</strong> $130,000</p>
+            <button onclick="buyProduct('Kit Liso Inteligente')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Ampollas Reparación Instantánea</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2020/05/ampolletas-reparacion-inst-x3-jpg.webp" alt="Ampollas Reparación Instantánea">
+            <p>Reparación instantánea con aminoácidos y azúcares de origen natural que recuperan la fibra capilar.</p>
+            <p><strong>Precio:</strong> $32,000</p>
+            <button onclick="buyProduct('Ampollas Reparación Instantánea')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Shampoo Células Madre</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2019/10/champu-elixir-antiedad350ml-jpg.webp" alt="Shampoo Células Madre">
+            <p>Con ácido hialurónico, protege el cabello, dándole un aspecto más denso y saludable.</p>
+            <p><strong>Precio:</strong> $45,000</p>
+            <button onclick="buyProduct('Shampoo Células Madre')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Tratamiento Células Madre</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2019/10/mascarilla-elixir-jpg.webp" alt="Tratamiento Células Madre">
+            <p>Fórmula francesa que mantiene la juventud del cabello, evita pérdida y aumenta su densidad.</p>
+            <p><strong>Precio:</strong> $50,000</p>
+            <button onclick="buyProduct('Tratamiento Células Madre')">Comprar</button>
+        </div>
+
+        <div class="product">
+            <h3>Elixir Secreto</h3>
+            <img src="https://marcel-france.com/wp-content/uploads/2023/01/ELIXIR-1920X1080-1-1024x576.webp" alt="Elixir Secreto">
+            <p>Cabello resistente como el roble, fórmula diseñada con la última tecnología francesa orientada a mantener la juventud del cabello, estimulando su crecimiento.</p>
+            <p><strong>Precio:</strong> $55,000</p>
+            <button onclick="buyProduct('Elixir Secreto')">Comprar</button>
+        </div>
+
+    </section>
+
+    <div class="spacer"></div>
+</body>
+</html>
